@@ -32,12 +32,13 @@ export const PLACEHOLDER_INPUT = "Ask Ennis Builders...";
 
 export const GREETING = "Hi! How can we help with your build, ADU, or home search?";
 
-export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
+export const getThemeConfig = (_theme: ColorScheme): ThemeOption => ({
+  colorScheme: "light",
   color: {
     grayscale: {
       hue: 220,
       tint: 6,
-      shade: theme === "dark" ? -1 : -4,
+      shade: -4,
     },
     accent: {
       primary: "#77be43",
