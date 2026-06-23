@@ -7,15 +7,30 @@ export const CREATE_SESSION_ENDPOINT = "/api/create-session";
 
 export const STARTER_PROMPTS: StartScreenPrompt[] = [
   {
-    label: "What can you do?",
-    prompt: "What can you do?",
-    icon: "circle-question",
+    label: "Tell me about ADUs",
+    prompt: "What ADU plans does Ennis Builders offer?",
+    icon: "lightbulb",
+  },
+  {
+    label: "Build on my lot",
+    prompt: "I want to build a home on my own lot — how does that work?",
+    icon: "write",
+  },
+  {
+    label: "Buy or sell a home",
+    prompt: "I'm interested in buying or selling a home with Ennis Builders.",
+    icon: "search",
+  },
+  {
+    label: "Talk to an agent",
+    prompt: "How can I get in touch with an Ennis Builders agent?",
+    icon: "lifesaver",
   },
 ];
 
-export const PLACEHOLDER_INPUT = "Ask anything...";
+export const PLACEHOLDER_INPUT = "Ask Ennis Builders...";
 
-export const GREETING = "How can I help you today?";
+export const GREETING = "Hi! How can we help with your build, ADU, or home search?";
 
 export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
   color: {
@@ -25,11 +40,13 @@ export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
       shade: theme === "dark" ? -1 : -4,
     },
     accent: {
-      primary: theme === "dark" ? "#f1f5f9" : "#0f172a",
+      primary: "#77be43",
       level: 1,
     },
   },
   radius: "round",
-  // Add other theme options here
+  typography: {
+    fontFamily: "'Proxima Nova', 'Futura PT', sans-serif",
+  },
   // chatkit.studio/playground to explore config options
 });
