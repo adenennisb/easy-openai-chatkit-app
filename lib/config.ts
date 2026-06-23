@@ -46,7 +46,9 @@ export const getThemeConfig = (_theme: ColorScheme): ThemeOption => ({
     },
   },
   radius: "round",
+  density: "compact",
   typography: {
+    baseSize: 14,
     fontFamily: "'Proxima Nova', 'Futura PT', sans-serif",
   },
   // chatkit.studio/playground to explore config options
