@@ -350,13 +350,15 @@ export function ChatKitPanel({
             : "block h-full w-full"
         }
       />
+      {isInitializingSession && !blockingError && (
+        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-4 bg-white">
+          <div className="h-10 w-10 animate-spin rounded-full border-4 border-slate-200 border-t-[#77be43]" />
+          <p className="text-sm font-medium text-slate-500">Connecting...</p>
+        </div>
+      )}
       <ErrorOverlay
         error={blockingError}
-        fallbackMessage={
-          blockingError || !isInitializingSession
-            ? null
-            : "Loading assistant session..."
-        }
+        fallbackMessage={null}
         onRetry={blockingError && errors.retryable ? handleResetChat : null}
         retryLabel="Restart chat"
       />
